@@ -1,0 +1,49 @@
+//引入依赖库管理
+apply from: "$rootDir/dependencies.gradle"
+
+//针对所有project的配置
+allprojects {
+    //创建项目时的你填写
+    group 'com.afeng'
+    version = '1.0.0'
+
+    //项目是java项目
+    apply plugin: 'java'
+    //项目是idea项目
+    apply plugin: 'idea'
+
+    //jdk版本
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    //仓库：gradle会根据从上到下的顺序依次去仓库中寻找依赖
+    repositories {
+        //优先从本地仓库获取
+        mavenLocal()
+        //从阿里云或者公司仓库获取
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/spring/' }
+        maven { url 'https://maven.aliyun.com/repository/spring-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        //从中央仓库获取
+        mavenCentral()
+        jcenter()
+    }
+
+}
+
+subprojects {
+
+    //项目中所使用到的通用依赖，这里添加的依赖会被所有项目，包括root项目继承
+    dependencies {
+        //必须如下引入,不然启动报错
+        compileOnly libs.lombok
+        annotationProcessor libs.lombok
+
+    }
+
+    // java编译的时候缺省状态下会因为中文字符而失败
+    [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+}
+

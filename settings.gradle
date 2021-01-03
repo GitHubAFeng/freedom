@@ -1,0 +1,4 @@
+rootProject.name = 'freedom'
+include 'common'
+include 'app'
+include 'admin'

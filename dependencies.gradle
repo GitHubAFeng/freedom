@@ -1,0 +1,126 @@
+ext {
+    versions = [
+            springBootVersion          : '2.4.1',
+            dependencyManagementVersion: '1.0.10.RELEASE',
+            springKafkaVersion         : '2.2.7.RELEASE',
+    ]
+    libs = [
+            springboot    : [
+                    "org.springframework.boot:spring-boot-starter-web:${versions.springBootVersion}",
+                    "org.springframework.boot:spring-boot-starter-test:${versions.springBootVersion}"
+            ],
+            lombok        : [
+                    "org.projectlombok:lombok:1.16.20"
+            ],
+            mysql         : [
+                    "mysql:mysql-connector-java:8.0.16"
+            ],
+            jpa           : [
+                    "org.springframework.boot:spring-boot-starter-data-jpa:${versions.springBootVersion}"
+            ],
+            aop           : [
+                    "org.springframework.boot:spring-boot-starter-aop:${versions.springBootVersion}"
+            ],
+            jdbc          : [
+                    "org.springframework.boot:spring-boot-starter-jdbc:${versions.springBootVersion}"
+            ],
+            mail          : [
+                    "org.springframework.boot:spring-boot-starter-mail:${versions.springBootVersion}"
+            ],
+            mybatisplus   : [
+                    "com.baomidou:mybatis-plus-boot-starter:3.0.2"
+            ],
+            jwt           : [
+                    "io.jsonwebtoken:jjwt:0.9.1"
+            ],
+            redis         : [
+                    "org.springframework.boot:spring-boot-starter-data-redis:${versions.springBootVersion}"
+            ],
+            commonspool   : [
+                    "org.apache.commons:commons-pool2:2.8.0"
+            ],
+            commonslang3  : [
+                    "org.apache.commons:commons-lang3:3.9"
+            ],
+            redisson      : [
+                    "org.redisson:redisson-spring-boot-starter:3.10.7"
+            ],
+            curator       : [
+                    "org.apache.curator:curator-recipes:3.2.1"
+            ],
+            jetcache      : [
+                    "com.alicp.jetcache:jetcache-starter-redis:2.5.12"
+            ],
+            shiro         : [
+                    "org.apache.shiro:shiro-core:1.4.1",
+                    "org.apache.shiro:shiro-spring:1.4.1",
+                    "org.apache.shiro:shiro-ehcache:1.4.1"
+            ],
+            thymeleaf     : [
+                    "org.springframework.boot:spring-boot-starter-thymeleaf:${versions.springBootVersion}"
+            ],
+            ehcache       : [
+                    "org.springframework.boot:spring-boot-starter-cache:${versions.springBootVersion}",
+                    "net.sf.ehcache:ehcache:3.7.1"
+            ],
+            mybatis       : [
+                    "org.mybatis.spring.boot:mybatis-spring-boot-starter:2.0.1"
+            ],
+            sharding      : [
+                    "org.apache.shardingsphere:sharding-jdbc-core:4.0.0-RC1"
+            ],
+            pagehelper    : [
+                    "com.github.pagehelper:pagehelper-spring-boot-starter:1.2.12"
+            ],
+            druid         : [
+                    "com.alibaba:druid-spring-boot-starter:1.1.18"
+            ],
+            postgresql    : [
+                    "org.postgresql:postgresql:42.2.5"
+            ],
+            log4j         : [
+                    "log4j:log4j:1.2.17"
+            ],
+            freemarker    : [
+                    "org.springframework.boot:spring-boot-starter-freemarker:${versions.springBootVersion}"
+            ],
+            activemq      : [
+                    "org.springframework.boot:spring-boot-starter-activemq:${versions.springBootVersion}",
+                    "org.messaginghub:pooled-jms:1.1.0"
+            ],
+            mongodb       : [
+                    "org.springframework.boot:spring-boot-starter-data-mongodb:${versions.springBootVersion}"
+            ],
+            elasticjob    : [
+                    "com.dangdang:elastic-job-lite-spring:2.1.5"
+            ],
+            springsession : [
+                    "org.springframework.session:spring-session-data-redis:${versions.springBootVersion}",
+                    "org.apache.commons:commons-pool2:2.7.0"
+            ],
+            kafka         : [
+                    "org.springframework.kafka:spring-kafka:${versions.springKafkaVersion}"
+            ],
+            elasticsearch : [
+                    "org.springframework.data:spring-data-elasticsearch:3.2.3.RELEASE"
+            ],
+            word          : [
+                    "org.apache.poi:poi-scratchpad:4.1.1",
+                    "org.apache.poi:poi-ooxml:4.1.1"
+            ],
+            springsecurity: [
+                    "org.springframework.boot:spring-boot-starter-security:${versions.springBootVersion}"
+            ],
+            solr          : [
+                    "org.springframework.boot:spring-boot-starter-data-solr:${versions.springBootVersion}"
+            ],
+            websocket     : [
+                    "org.springframework.boot:spring-boot-starter-websocket:${versions.springBootVersion}",
+                    "org.springframework.boot:spring-boot-starter-reactor-netty:${versions.springBootVersion}"
+            ],
+            dataway       : [
+                    "net.hasor:hasor-dataway:4.1.8",
+                    "net.hasor:hasor-spring:4.1.8"
+            ]
+    ]
+}
