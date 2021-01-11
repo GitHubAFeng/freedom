@@ -1,3 +1,5 @@
+package com.afeng.common.utils;
+
 import java.math.BigDecimal;
 
 /**
@@ -154,7 +156,7 @@ public class BigDecimalUtils {
     }
 
     /**
-	 * 除法计算(result = v1 ÷ v2)
+     * 除法计算(result = v1 ÷ v2)
      * 提供（相对）精确的除法运算，当发生除不尽的情况时，精确到
      * 小数点以后10位，以后的数字四舍五入
      *
@@ -278,12 +280,16 @@ public class BigDecimalUtils {
     public static boolean compare(String v1, String v2) {
         BigDecimal b1 = new BigDecimal(v1);
         BigDecimal b2 = new BigDecimal(v2);
-        int bj = b1.compareTo(b2);
-        boolean res;
-        if (bj > 0)
-            res = true;
-        else
-            res = false;
-        return res;
+        return b1.compareTo(b2) > 0;
     }
+
+    //小于或等于
+    public static boolean ltOrEq(String v1, String v2) {
+        BigDecimal b1 = new BigDecimal(v1);
+        BigDecimal b2 = new BigDecimal(v2);
+        if (b1.compareTo(b2) == 0) return true;
+        return b1.compareTo(b2) < 0;
+    }
+
+
 }

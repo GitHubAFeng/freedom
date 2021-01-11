@@ -3,124 +3,196 @@ ext {
             springBootVersion          : '2.4.1',
             dependencyManagementVersion: '1.0.10.RELEASE',
             springKafkaVersion         : '2.2.7.RELEASE',
+            shiroVersion               : '1.7.0',
     ]
     libs = [
-            springboot    : [
+            springboot          : [
                     "org.springframework.boot:spring-boot-starter-web:${versions.springBootVersion}",
-                    "org.springframework.boot:spring-boot-starter-test:${versions.springBootVersion}"
             ],
-            lombok        : [
+            springbootTest      : [
+                    "org.springframework.boot:spring-boot-starter-test:${versions.springBootVersion}",
+            ],
+            junit               : [
+                    "org.junit.jupiter:junit-jupiter-api:5.5.0",
+            ],
+            lombok              : [
                     "org.projectlombok:lombok:1.16.20"
             ],
-            mysql         : [
-                    "mysql:mysql-connector-java:8.0.16"
+            mysql               : [
+                    "mysql:mysql-connector-java:8.0.22"
             ],
-            jpa           : [
+            sqlserver           : [
+                    "com.microsoft.sqlserver:mssql-jdbc:8.4.1.jre8"
+            ],
+            jpa                 : [
                     "org.springframework.boot:spring-boot-starter-data-jpa:${versions.springBootVersion}"
             ],
-            aop           : [
+            springbootAop       : [
                     "org.springframework.boot:spring-boot-starter-aop:${versions.springBootVersion}"
             ],
-            jdbc          : [
+            jdbc                : [
                     "org.springframework.boot:spring-boot-starter-jdbc:${versions.springBootVersion}"
             ],
-            mail          : [
+            mail                : [
                     "org.springframework.boot:spring-boot-starter-mail:${versions.springBootVersion}"
             ],
-            mybatisplus   : [
+            mybatisplus         : [
                     "com.baomidou:mybatis-plus-boot-starter:3.0.2"
             ],
-            jwt           : [
-                    "io.jsonwebtoken:jjwt:0.9.1"
+            jwt                 : [
+                    "com.auth0:java-jwt:3.4.0"
             ],
-            redis         : [
+            redis               : [
                     "org.springframework.boot:spring-boot-starter-data-redis:${versions.springBootVersion}"
             ],
-            commonspool   : [
-                    "org.apache.commons:commons-pool2:2.8.0"
+            jedis               : [
+                    "redis.clients:jedis:3.4.1"
             ],
-            commonslang3  : [
-                    "org.apache.commons:commons-lang3:3.9"
+            commonspool         : [
+                    "org.apache.commons:commons-pool2:2.9.0"
             ],
-            redisson      : [
-                    "org.redisson:redisson-spring-boot-starter:3.10.7"
+            commonslang3        : [
+                    "org.apache.commons:commons-lang3:3.11"
             ],
-            curator       : [
+            redisson            : [
+                    "org.redisson:redisson-spring-boot-starter:3.14.1"
+            ],
+            curator             : [
                     "org.apache.curator:curator-recipes:3.2.1"
             ],
-            jetcache      : [
+            jetcache            : [
                     "com.alicp.jetcache:jetcache-starter-redis:2.5.12"
             ],
-            shiro         : [
-                    "org.apache.shiro:shiro-core:1.4.1",
-                    "org.apache.shiro:shiro-spring:1.4.1",
-                    "org.apache.shiro:shiro-ehcache:1.4.1"
+            shiro               : [
+                    "org.apache.shiro:shiro-core:${versions.shiroVersion}",
+                    "org.apache.shiro:shiro-spring:${versions.shiroVersion}",
+                    "com.github.theborakompanioni:thymeleaf-extras-shiro:2.0.0",
             ],
-            thymeleaf     : [
+            shiroredis          : [
+                    "org.crazycake:shiro-redis:3.3.0",
+            ],
+            shiroehcache        : [
+                    "org.apache.shiro:shiro-ehcache:${versions.shiroVersion}",
+            ],
+            thymeleaf           : [
                     "org.springframework.boot:spring-boot-starter-thymeleaf:${versions.springBootVersion}"
             ],
-            ehcache       : [
+            ehcache             : [
                     "org.springframework.boot:spring-boot-starter-cache:${versions.springBootVersion}",
                     "net.sf.ehcache:ehcache:3.7.1"
             ],
-            mybatis       : [
-                    "org.mybatis.spring.boot:mybatis-spring-boot-starter:2.0.1"
+            mybatis             : [
+                    "org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.4"
             ],
-            sharding      : [
+            sharding            : [
                     "org.apache.shardingsphere:sharding-jdbc-core:4.0.0-RC1"
             ],
-            pagehelper    : [
-                    "com.github.pagehelper:pagehelper-spring-boot-starter:1.2.12"
+            pagehelper          : [
+                    "com.github.pagehelper:pagehelper-spring-boot-starter:1.3.0"
             ],
-            druid         : [
-                    "com.alibaba:druid-spring-boot-starter:1.1.18"
+            druid               : [
+                    "com.alibaba:druid-spring-boot-starter:1.2.4"
             ],
-            postgresql    : [
+            postgresql          : [
                     "org.postgresql:postgresql:42.2.5"
             ],
-            log4j         : [
+            log4j               : [
                     "log4j:log4j:1.2.17"
             ],
-            freemarker    : [
+            freemarker          : [
                     "org.springframework.boot:spring-boot-starter-freemarker:${versions.springBootVersion}"
             ],
-            activemq      : [
+            activemq            : [
                     "org.springframework.boot:spring-boot-starter-activemq:${versions.springBootVersion}",
                     "org.messaginghub:pooled-jms:1.1.0"
             ],
-            mongodb       : [
+            mongodb             : [
                     "org.springframework.boot:spring-boot-starter-data-mongodb:${versions.springBootVersion}"
             ],
-            elasticjob    : [
+            elasticjob          : [
                     "com.dangdang:elastic-job-lite-spring:2.1.5"
             ],
-            springsession : [
+            springsession       : [
                     "org.springframework.session:spring-session-data-redis:${versions.springBootVersion}",
                     "org.apache.commons:commons-pool2:2.7.0"
             ],
-            kafka         : [
+            kafka               : [
                     "org.springframework.kafka:spring-kafka:${versions.springKafkaVersion}"
             ],
-            elasticsearch : [
+            elasticsearch       : [
                     "org.springframework.data:spring-data-elasticsearch:3.2.3.RELEASE"
             ],
-            word          : [
+            word                : [
                     "org.apache.poi:poi-scratchpad:4.1.1",
                     "org.apache.poi:poi-ooxml:4.1.1"
             ],
-            springsecurity: [
+            springsecurity      : [
                     "org.springframework.boot:spring-boot-starter-security:${versions.springBootVersion}"
             ],
-            solr          : [
+            solr                : [
                     "org.springframework.boot:spring-boot-starter-data-solr:${versions.springBootVersion}"
             ],
-            websocket     : [
+            websocket           : [
                     "org.springframework.boot:spring-boot-starter-websocket:${versions.springBootVersion}",
                     "org.springframework.boot:spring-boot-starter-reactor-netty:${versions.springBootVersion}"
             ],
-            dataway       : [
+            dataway             : [
                     "net.hasor:hasor-dataway:4.1.8",
                     "net.hasor:hasor-spring:4.1.8"
-            ]
+            ],
+            fastjson            : [
+                    "com.alibaba:fastjson:1.2.75"
+            ],
+            commonscodec        : [
+                    "commons-codec:commons-codec:1.15"
+            ],
+            commonsio           : [
+                    "commons-io:commons-io:2.5"
+            ],
+            commonsfileupload   : [
+                    "commons-fileupload:commons-fileupload:1.3.3"
+            ],
+            springContextSupport: [
+                    "org.springframework:spring-context-support:${versions.springBootVersion}"
+            ],
+            springbootQuartz    : [
+                    "org.springframework.boot:spring-boot-starter-quartz:${versions.springBootVersion}"
+            ],
+            UserAgentUtils      : [
+                    "eu.bitwalker:UserAgentUtils:1.21"
+            ],
+            velocity            : [
+                    "org.apache.velocity:velocity:1.7"
+            ],
+            kaptcha             : [
+                    "com.github.penggle:kaptcha:2.3.2"
+            ],
+            swagger             : [
+                    "io.springfox:springfox-boot-starter:3.0.0"
+            ],
+            oshi                : [
+                    "com.github.oshi:oshi-core:5.3.6"
+            ],
+            poi                 : [
+                    "org.apache.poi:poi-ooxml:4.1.2"
+            ],
+            validation          : [
+                    "javax.validation:validation-api:2.0.1.Final"
+            ],
+            aspectj             : [
+                    "org.aspectj:aspectjweaver:1.9.4"
+            ],
+            zxing               : [
+                    "com.google.zxing:core:3.4.1"
+            ],
+            ossQiniu               : [
+                    "com.qiniu:qiniu-java-sdk:7.2.23"
+            ],
+            ossAliyun               : [
+                    "com.aliyun.oss:aliyun-sdk-oss:2.5.0"
+            ],
+            ossQcloud               : [
+                    "com.qcloud:cos_api:4.4"
+            ],
     ]
 }

@@ -1,12 +1,28 @@
 dependencies {
-//    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-//    implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile project(':common')
+    compile libs.shiro
+    compile libs.shiroehcache
+    compile libs.springContextSupport
+//    解析客户端操作系统、浏览器等
+    compile libs.UserAgentUtils
+//    代码生成使用模板
+    compile libs.velocity
+//    验证码
+    compile libs.kaptcha
+    compile libs.swagger
+//    获取系统信息
+    compile libs.oshi
+//    excel工具
+    compile libs.poi
+    compile libs.validation
+    compile libs.mail
 
-//    implementation 'org.springframework.boot:spring-boot-starter-web:2.4.1'
-//    implementation 'org.springframework.boot:spring-boot-starter-test:2.4.1'
-    implementation libs.springboot
-
-    implementation project(':common')
+    //OSS
+    compile libs.ossQiniu
+    compile libs.ossAliyun
+    compile(libs.ossQcloud) {
+        exclude module: 'slf4j-log4j12'
+    }
 }
 
 test {

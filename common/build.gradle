@@ -1,4 +1,40 @@
+/* 子模块项目名，jar名 */
+archivesBaseName = 'common'
+// 按照SpringBoot的要求下面这个必须打包成jar，作为依赖
+jar.enabled = true
+/* 需要org.springframework.boot插件 不需要打包成可执行的jar*/
+//bootJar.enabled = false
 
 dependencies {
+    //springBoot
+    compile libs.springboot
+    testCompile libs.springbootTest
+    testCompile libs.junit
+    compile libs.springbootAop
+    compile libs.thymeleaf
+
+    //数据源
+    //compile libs.mysql
+    compile libs.sqlserver
+    compile libs.pagehelper
+    compile libs.mybatis
+    compile libs.log4j
+    compile libs.druid
+
+    //缓存
+    compile libs.redis
+    compile libs.commonspool
+    //compile libs.redisson
+
+    //工具类
+    compile libs.commonslang3
+    compile libs.commonscodec
+    compile libs.commonsio
+    compile libs.commonsfileupload
+    compile libs.fastjson
+    compile libs.jwt
+    compile libs.zxing
+
+    compile libs.springbootQuartz
 
 }
